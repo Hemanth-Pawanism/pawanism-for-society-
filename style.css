@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --dark: #101827;
+  --blue: #2563eb;
+  --light: #f5f7fb;
+  --text: #1f2937;
+  --muted: #64748b;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--text); background: var(--light); }
+.hero { min-height: 560px; color: white; background: linear-gradient(135deg, #0f172a, #1d4ed8 60%, #0ea5e9); }
+.navbar { max-width: 1180px; margin: auto; padding: 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { font-size: 23px; font-weight: 800; }
+.brand span { color: #bfdbfe; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.nav-links a { color: white; text-decoration: none; font-size: 14px; font-weight: 600; }
+.hero-content { max-width: 900px; margin: 90px auto; padding: 0 24px; text-align: center; }
+.eyebrow { letter-spacing: 3px; font-size: 12px; font-weight: 700; color: #bfdbfe; }
+h1 { font-size: clamp(40px, 7vw, 78px); line-height: 1.05; margin: 18px 0; }
+.hero-content p:not(.eyebrow) { max-width: 650px; margin: 0 auto 30px; line-height: 1.8; color: #dbeafe; }
+.button, .danger-button { display: inline-block; border: 0; border-radius: 10px; padding: 13px 18px; cursor: pointer; font-weight: 700; text-decoration: none; }
+.button { background: var(--blue); color: white; }
+.button:hover { opacity: .9; }
+.section { max-width: 1180px; margin: auto; padding: 70px 24px; }
+.alt { max-width: none; padding-left: max(24px, calc((100% - 1132px)/2)); padding-right: max(24px, calc((100% - 1132px)/2)); background: #eaf0ff; }
+.intro { text-align: center; }
+h2 { font-size: 32px; margin: 0 0 12px; }
+.intro p { color: var(--muted); max-width: 700px; margin: auto; line-height: 1.7; }
+.stats { display: flex; justify-content: center; gap: 70px; margin-top: 35px; }
+.stats div { display: flex; flex-direction: column; gap: 8px; }
+.stats strong { font-size: 34px; color: var(--blue); }
+.stats span, .section-heading span { color: var(--muted); font-size: 13px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 15px; margin-bottom: 25px; }
+.content-grid, .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+.empty { color: var(--muted); display: block; padding: 20px 0; }
+.card, .media-card, .article-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(15, 23, 42, .06); }
+.media-card video, .media-card img { width: 100%; display: block; max-height: 300px; object-fit: cover; background: #0f172a; }
+.card-body { padding: 16px; }
+.card-body h3 { margin: 0 0 8px; font-size: 17px; }
+.card-body p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.article-card { padding: 20px; }
+.article-card h3 { margin-top: 0; }
+.article-card p { color: var(--muted); line-height: 1.6; }
+.article-card a { color: var(--blue); font-weight: 700; word-break: break-word; }
+.add-section { padding-bottom: 40px; }
+.notice { padding: 15px; border-left: 4px solid var(--blue); background: #eff6ff; color: #334155; line-height: 1.6; border-radius: 8px; }
+.forms { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 25px; }
+.form-card { padding: 22px; }
+.form-card h3 { margin-top: 0; }
+label { display: block; font-size: 13px; font-weight: 700; margin: 15px 0; }
+input, textarea { width: 100%; margin-top: 8px; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font: inherit; }
+.form-card .button { width: 100%; }
+.danger-button { margin-top: 25px; background: #dc2626; color: white; }
+footer { text-align: center; padding: 30px 20px; background: var(--dark); color: #cbd5e1; font-size: 13px; }
+@media (max-width: 700px) {
+  .navbar { align-items: flex-start; flex-direction: column; }
+  .hero-content { margin: 55px auto; }
+  .stats { gap: 28px; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+}

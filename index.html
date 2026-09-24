@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawanism for Society</title>
+  <meta name="description" content="Pawanism for Society — videos, photos, articles, social awareness and community initiatives." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Pawanism for Society" />
+  <meta name="keywords" content="Pawanism for Society, social service, society, social awareness, community, Pawanism" />
+  <meta property="og:title" content="Pawanism for Society" />
+  <meta property="og:description" content="Videos, photos, articles and social awareness content from Pawanism for Society." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Pawanism for Society","description":"Videos, photos, articles and social awareness content."}
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="brand">Pawanism <span>for Society</span></div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#videos">Videos</a>
+        <a href="#photos">Photos</a>
+        <a href="#articles">Articles</a>
+        <a href="#add">Add Content</a>
+      </div>
+    </nav>
+    <section id="home" class="hero-content">
+      <p class="eyebrow">UNITY • SERVICE • HUMANITY</p>
+      <h1>Pawanism for Society</h1>
+      <p>Share inspiring videos, meaningful photographs, and useful articles that encourage social responsibility.</p>
+      <a class="button" href="#add">Start Sharing</a>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <h2>Our Community</h2>
+      <p>Use this website to showcase social activities, awareness campaigns, inspirational moments, and helpful resources.</p>
+      <div class="stats">
+        <div><strong id="videoCount">0</strong><span>Videos</span></div>
+        <div><strong id="photoCount">0</strong><span>Photos</span></div>
+        <div><strong id="articleCount">0</strong><span>Articles</span></div>
+      </div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="section-heading">
+        <h2>Videos</h2><span>Watch and share</span>
+      </div>
+      <div id="videoGrid" class="content-grid empty">No videos added yet.</div>
+    </section>
+
+    <section id="photos" class="section alt">
+      <div class="section-heading">
+        <h2>Photos</h2><span>Moments that matter</span>
+      </div>
+      <div id="photoGrid" class="content-grid empty">No photos added yet.</div>
+    </section>
+
+    <section id="articles" class="section">
+      <div class="section-heading">
+        <h2>Articles & Useful Links</h2><span>Read and learn</span>
+      </div>
+      <div id="articleGrid" class="article-grid empty">No articles added yet.</div>
+    </section>
+
+    <section id="add" class="section add-section">
+      <div class="section-heading">
+        <h2>Add Your Content</h2><span>Saved in this browser</span>
+      </div>
+      <p class="notice">This is a static website. Added content is stored in your browser using local storage. For public uploads from multiple users, connect it to a backend such as Firebase, Supabase, or a server.</p>
+
+      <div class="forms">
+        <form id="videoForm" class="card form-card">
+          <h3>Add Video</h3>
+          <label>Video title<input id="videoTitle" required placeholder="Enter video title" /></label>
+          <label>Video file<input id="videoFile" type="file" accept="video/*" required /></label>
+          <button class="button" type="submit">Add Video</button>
+        </form>
+
+        <form id="photoForm" class="card form-card">
+          <h3>Add Photo</h3>
+          <label>Photo caption<input id="photoTitle" required placeholder="Enter photo caption" /></label>
+          <label>Photo file<input id="photoFile" type="file" accept="image/*" required /></label>
+          <button class="button" type="submit">Add Photo</button>
+        </form>
+
+        <form id="articleForm" class="card form-card">
+          <h3>Add Article Link</h3>
+          <label>Article title<input id="articleTitle" required placeholder="Enter article title" /></label>
+          <label>URL link<input id="articleUrl" type="url" required placeholder="https://example.com/article" /></label>
+          <label>Short description<textarea id="articleDescription" rows="3" placeholder="Write a short description"></textarea></label>
+          <button class="button" type="submit">Add Article</button>
+        </form>
+      </div>
+      <button id="clearAll" class="danger-button">Clear All Saved Content</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Pawanism for Society. Built for sharing positive social messages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
